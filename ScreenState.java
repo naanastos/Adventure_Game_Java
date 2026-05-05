@@ -1,0 +1,9 @@
+public enum ScreenState {
+    TITLE_SCREEN,
+    INSTRUCTIONS,
+    MAP_VIEW,
+    LOCATION_VIEW,
+    INVENTORY_VIEW,
+    QUEST_LOG_VIEW,
+    WIN_SCREEN
+}
