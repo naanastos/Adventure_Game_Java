@@ -346,8 +346,10 @@ public class GamePanel extends JPanel implements MouseListener, MouseMotionListe
     // DRAWING HELPERS
     private void drawNpc(Graphics2D g, String key, int nx) {
         if (key == null) return;
-        BufferedImage img = AssetManager.get(key);
-        if (img != null) g.drawImage(img, nx, IMG_Y + (IMG_H - 480) / 2, 280, 480, null);
+        java.util.List<java.awt.image.BufferedImage> frames = AssetManager.getFrames(key);
+        if (frames.isEmpty()) return;
+        int idx = (int)((System.currentTimeMillis() / 275) % frames.size());
+        g.drawImage(frames.get(idx), nx, IMG_Y + (IMG_H - 480) / 2, 280, 480, null);
     }
 
     private void drawChoices(Graphics2D g) {
