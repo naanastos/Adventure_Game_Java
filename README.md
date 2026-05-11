@@ -1,5 +1,7 @@
 Java Final Project
 
+
+
 1\. Project Overview
 
 Campus Quest is an adventure game written in Java using Swing and AWT. The player wanders the STCC campus talking to various NPCs and a bunch of fetch quests until eventually arriving at the Student Success Center.
@@ -22,6 +24,8 @@ Campus Quest is an adventure game written in Java using Swing and AWT. The playe
 
 **MusicPlayer.java**: Handles the background music
 
+
+
 **Main.java\
 **just builds the window
 
@@ -30,6 +34,8 @@ Campus Quest is an adventure game written in Java using Swing and AWT. The playe
 setPreferredSize(1280, 720) sets the canvas to 1280x720. And then followed by frame.pack() so that the window borders overlap inside the drawable area.
 
 setLocationRelativeTo(null) centers the window
+
+
 
 **ScreenState.java**
 
@@ -50,6 +56,8 @@ QUEST_LOG_VIEW: the current quest text
 WIN_SCREEN: the ending menu with play again or quit
 
 The paintComponent switch in GamePanel uses this enum to decide which draw routine to call
+
+
 
 **Choice.java**
 
@@ -73,11 +81,15 @@ Used everywhere to pair a menu label like 'Search parking lot' with the lambda t
 
 GamePanel keeps a List<Choice> choices field and renders up to four of them in the bottom right panel so that when the player clicks slot *, the panel calls choices.get(*).action.run().
 
+
+
 **GameState.java**
 
 This class holds every piece of mutable game state
 
 Boolean flags track quest progress
+
+
 
 **AssetManager.java**
 
