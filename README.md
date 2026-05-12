@@ -88,3 +88,13 @@ AssetManager.java
 class that loads PNGs and caches them. If a file is missing it returns null using callers so a missing asset is skipped rather than crashing the game
 
 If a missing file is confirmed to be missing that is cached using containsKey so a missing file isn't retried on every frame
+
+
+Song Copyright
+=================
+
+Tracklist:
+Lookout Landing - Zelda: Tears of the Kingdom OST
+Alleycat - Persona 5 OST
+i got u  - Tender Spring
+anthems  - Charli xcx
