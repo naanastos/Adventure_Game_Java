@@ -46,19 +46,19 @@ public class GamePanel extends JPanel implements MouseListener, MouseMotionListe
         // Build the list of all game locations
         LOCATION_LIST.add(new Location("Street Facing Parking Lot",  "street_parking_lot"));
         LOCATION_LIST.add(new Location("Parking Lot",                "parking_lot"));
-        LOCATION_LIST.add(new Location("Parking Lot Wizard's House", "wizard_house",             "npc_wizard"));
+        LOCATION_LIST.add(new Location("Parking Lot Wizard's House", "wizard_house",             "npc/wizard"));
         LOCATION_LIST.add(new Location("Campus Entrance",            "campus_entrance_blocked"));
         LOCATION_LIST.add(new Location("Building 16",                "building16"));
-        LOCATION_LIST.add(new Location("Building 19",                "building19",               "npc_computer_lab_person"));
+        LOCATION_LIST.add(new Location("Building 19",                "building19",               "npc/computer_lab_person"));
         LOCATION_LIST.add(new Location("Building 2",                 "building2"));
         LOCATION_LIST.add(new Location("Dollar Tree",                "dollar_tree"));
         LOCATION_LIST.add(new Location("KFC",                        "kfc"));
         LOCATION_LIST.add(new Location("Popeyes",                    "popeyes"));
-        LOCATION_LIST.add(new Location("CVS",                        "cvs",                      "npc_cvs_clerk"));
-        LOCATION_LIST.add(new Location("Theater",                    "theater",                  "npc_theater_actor"));
-        LOCATION_LIST.add(new Location("Radio Station",              "radio_station",             "npc_radio_dj"));
-        LOCATION_LIST.add(new Location("Bookstore",                  "bookstore",                "npc_bookstore_student"));
-        LOCATION_LIST.add(new Location("Fitness Center",             "fitness_center",            "npc_gym_man"));
+        LOCATION_LIST.add(new Location("CVS",                        "cvs",                      "npc/cvs_clerk"));
+        LOCATION_LIST.add(new Location("Theater",                    "theater",                  "npc/theater_actor"));
+        LOCATION_LIST.add(new Location("Radio Station",              "radio_station",             "npc/radio_dj"));
+        LOCATION_LIST.add(new Location("Bookstore",                  "bookstore",                "npc/bookstore_student"));
+        LOCATION_LIST.add(new Location("Fitness Center",             "fitness_center",            "npc/gym_man"));
         LOCATION_LIST.add(new Location("Brick Wall",                 "brick_wall"));
         LOCATION_LIST.add(new Location("Student Success Center",     "student_success_entrance"));
         LOCATION_LIST.add(new Location("Student Success Center",     "student_success_center"));
@@ -288,7 +288,7 @@ public class GamePanel extends JPanel implements MouseListener, MouseMotionListe
             // Middle: item image preview
             if (hoveredInvItem >= 0 && hoveredInvItem < inv.size()) {
                 String item = inv.get(hoveredInvItem);
-                String imgKey = "item_" + item.toLowerCase()
+                String imgKey = "inventory/" + item.toLowerCase()
                     .replaceAll("[^a-z0-9]+", "_")
                     .replaceAll("^_|_$", "");
                 BufferedImage img = AssetManager.get(imgKey);
@@ -651,7 +651,7 @@ public class GamePanel extends JPanel implements MouseListener, MouseMotionListe
 
         case FITNESS_CENTER -> {
             loadLocation(loc);
-            npcKey2 = "npc_gym_woman"; // second NPC - handled here since Location only stores one
+            npcKey2 = "npc/gym_woman"; // second NPC - handled here since Location only stores one
             buildGymChoices();
         }
 
